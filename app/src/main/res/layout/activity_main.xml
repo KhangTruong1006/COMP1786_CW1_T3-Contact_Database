@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textViewName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="53dp"
+        android:layout_marginEnd="27dp"
+        android:text="@string/name"
+        app:layout_constraintEnd_toStartOf="@+id/inputName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewDoB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="131dp"
+        android:text="@string/dob"
+        app:layout_constraintEnd_toStartOf="@+id/inputDoB"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="@string/email"
+        app:layout_constraintEnd_toStartOf="@+id/inputEmail"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputDoB" />
+
+    <EditText
+        android:id="@+id/inputName"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="27dp"
+        android:ems="10"
+        android:hint="@string/hint_name"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textViewName"
+        app:layout_constraintTop_toTopOf="@+id/textViewName" />
+
+    <EditText
+        android:id="@+id/inputDoB"
+        android:layout_width="293dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:hint="@string/hint_dob"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewDoB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textViewDoB"
+        app:layout_constraintTop_toTopOf="@+id/textViewDoB" />
+
+    <EditText
+        android:id="@+id/inputEmail"
+        android:layout_width="293dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:hint="@string/hint_email"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textViewEmail"
+        app:layout_constraintTop_toTopOf="@+id/textViewEmail" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="13dp"
+        android:onClick="handleSaveButtonClick"
+        android:text="@string/save_details"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnView"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btnView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="47dp"
+        android:layout_marginEnd="47dp"
+        android:layout_marginBottom="201dp"
+        android:onClick="handleViewButtonClick"
+        android:text="@string/view_details"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnSave"
+        app:layout_constraintStart_toStartOf="@+id/textViewName" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

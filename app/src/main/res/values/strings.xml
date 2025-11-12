@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Contact Database</string>
+
+    <!--    Buttons-->
+    <string name="save_details">Save Details</string>
+    <string name="view_details">View Details</string>
+    
+    <!--    Text View-->
+    <string name="name">Name</string>
+    <string name="dob">Date of Birth</string>
+    <string name="email">Email</string>
+    <string name="skills">Skills</string>
+    
+    <!--    Hint Text-->
+    <string name="hint_name">John Doe</string>
+    <string name="hint_dob">DD/MM/YYYY</string>
+    <string name="hint_email">johndoe@example.com</string>
+</resources>

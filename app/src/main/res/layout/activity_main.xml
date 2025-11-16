@@ -43,8 +43,8 @@
 
     <EditText
         android:id="@+id/inputName"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
+        android:layout_width="334dp"
+        android:layout_height="48dp"
         android:layout_marginEnd="27dp"
         android:ems="10"
         android:hint="@string/hint_name"
@@ -66,11 +66,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/textViewDoB"
-        app:layout_constraintTop_toTopOf="@+id/textViewDoB" />
+        app:layout_constraintTop_toTopOf="@+id/textViewDoB"
+        app:layout_constraintVertical_bias="0.516" />
 
     <EditText
         android:id="@+id/inputEmail"
-        android:layout_width="293dp"
+        android:layout_width="312dp"
         android:layout_height="50dp"
         android:ems="10"
         android:hint="@string/hint_email"
@@ -85,7 +86,7 @@
         android:id="@+id/btnSave"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="13dp"
+        android:layout_marginEnd="64dp"
         android:onClick="handleSaveButtonClick"
         android:text="@string/save_details"
         app:layout_constraintBaseline_toBaselineOf="@+id/btnView"
@@ -97,11 +98,58 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="47dp"
         android:layout_marginEnd="47dp"
-        android:layout_marginBottom="201dp"
+        android:layout_marginBottom="60dp"
         android:onClick="handleViewButtonClick"
         android:text="@string/view_details"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnSave"
+        app:layout_constraintHorizontal_bias="0.303"
         app:layout_constraintStart_toStartOf="@+id/textViewName" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="277dp"
+        android:layout_height="202dp"
+        android:layout_marginEnd="65dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintTop_toTopOf="@+id/textView4"
+        app:layout_constraintVertical_bias="0.521"
+        app:srcCompat="@drawable/img1" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="408dp"
+        android:layout_marginEnd="47dp"
+        android:text="@string/avatar"
+        app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnForward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="4dp"
+        android:onClick="handleForwardButton"
+        android:text="@string/forward"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/btnBackward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="36dp"
+        android:onClick="handleBackwardButton"
+        android:text="@string/backward"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

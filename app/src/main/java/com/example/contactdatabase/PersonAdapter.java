@@ -3,6 +3,8 @@ package com.example.contactdatabase;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
@@ -30,6 +32,7 @@ public class PersonAdapter extends RecyclerView.Adapter<PersonAdapter.PersonView
         holder.tvName.setText(people.get(position).getName());
         holder.tvDoB.setText(people.get(position).getDOB());
         holder.tvEmail.setText(people.get(position).getEmail());
+        holder.ivAvatar.setImageResource(people.get(position).getAvatar());
     }
 
     @Override
@@ -40,12 +43,14 @@ public class PersonAdapter extends RecyclerView.Adapter<PersonAdapter.PersonView
 //    create ViewHolder for each item in RecyclerView
     public class PersonViewHolder extends RecyclerView.ViewHolder{
         public TextView tvName, tvDoB, tvEmail;
+        public ImageView ivAvatar;
 
         public PersonViewHolder(@NonNull View itemView){
             super(itemView);
             tvName = itemView.findViewById(R.id.tvName);
             tvDoB = itemView.findViewById(R.id.tvDoB);
             tvEmail = itemView.findViewById(R.id.tvEmail);
+            ivAvatar = itemView.findViewById(R.id.ivAvatar);
         }
     }
 }

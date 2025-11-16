@@ -4,12 +4,14 @@
     <!--    Buttons-->
     <string name="save_details">Save Details</string>
     <string name="view_details">View Details</string>
+    <string name="forward">Forward</string>
+    <string name="backward">Backward</string>
     
     <!--    Text View-->
     <string name="name">Name</string>
     <string name="dob">Date of Birth</string>
     <string name="email">Email</string>
-    <string name="skills">Skills</string>
+    <string name="avatar">Avatar</string>
     
     <!--    Hint Text-->
     <string name="hint_name">John Doe</string>

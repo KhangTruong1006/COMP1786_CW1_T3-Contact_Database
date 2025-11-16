@@ -5,18 +5,21 @@ public class Person {
     private String name;
     private String dob;
     private String email;
+    private int avatar;
     private int id;
 
-    public Person(String name, String dob, String email){
+    public Person(String name, String dob, String email, int avatar){
         this.name = name;
         this.dob = dob;
         this.email = email;
+        this.avatar = avatar;
     }
-    public Person(int id,String name, String dob, String email){
+    public Person(int id,String name, String dob, String email, int avatar){
         this.id = id;
         this.name = name;
         this.dob = dob;
         this.email = email;
+        this.avatar = avatar;
     }
 
     public String getName(){return name;}
@@ -33,4 +36,7 @@ public class Person {
     public void setId(int id) {
         this.id = id;
     }
+
+    public void setAvatar(int avatar) {this.avatar = avatar;}
+    public int getAvatar(){return this.avatar;}
 }

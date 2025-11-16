@@ -16,6 +16,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String NAME_COLUMN = "name";
     public static final String DOB_COLUMN = "dob";
     public static final String EMAIL_COLUMN = "email";
+    public static final String AVATAR_COLUMN = "avatar";
 
     private SQLiteDatabase database;
 
@@ -24,8 +25,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             "%s INTEGER PRIMARY KEY AUTOINCREMENT, " +
             "%s TEXT, " +
             "%s TEXT, " +
+            "%s TEXT, " +
             "%s TEXT) ",
-            DATABASE_NAME, ID_COLUMN, NAME_COLUMN, DOB_COLUMN, EMAIL_COLUMN
+            DATABASE_NAME, ID_COLUMN, NAME_COLUMN, DOB_COLUMN, EMAIL_COLUMN, AVATAR_COLUMN
     );
 
     public DatabaseHelper(Context context){
@@ -54,24 +56,25 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         rowValues.put(NAME_COLUMN, p.getName());
         rowValues.put(DOB_COLUMN, p.getDOB());
         rowValues.put(EMAIL_COLUMN, p.getEmail());
+        rowValues.put(AVATAR_COLUMN, p.getAvatar());
 
         return database.insertOrThrow(DATABASE_NAME, null, rowValues);
     }
 
     public ArrayList<Person> getDetails(){
-        Cursor results = database.query("details", new String[] {"person_id", "name", "dob", "email"},
+        Cursor results = database.query("details", new String[] {"person_id", "name", "dob", "email", "avatar"},
                 null,null,null, null, "name");
 
         ArrayList<Person> listPeople = new ArrayList<>();
-        String resultText = "";
         results.moveToFirst();
         while(!results.isAfterLast()){
             int id = results.getInt(0);
             String name = results.getString(1);
             String dob = results.getString(2);
             String email = results.getString(3);
+            int avatar = results.getInt(4);
 
-            listPeople.add(new Person(id, name, dob, email));
+            listPeople.add(new Person(id, name, dob, email, avatar));
          results.moveToNext();
         }
 
